@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/designers-portfolio/static/css/main.78cce981.css",
+    "main.js": "/designers-portfolio/static/js/main.051bc79f.js",
+    "static/media/royal_location5.jpg": "/designers-portfolio/static/media/royal_location5.e17e7f9408a826c65289.jpg",
+    "static/media/royal_location4.jpg": "/designers-portfolio/static/media/royal_location4.cb6a0dfb97bc7fe0f74c.jpg",
+    "static/media/alice_location4.jpg": "/designers-portfolio/static/media/alice_location4.a8880fd7da4f0f391073.jpg",
+    "static/media/royal_location1.jpg": "/designers-portfolio/static/media/royal_location1.41731a2307c7b253f2d9.jpg",
+    "static/media/alice_location3.jpg": "/designers-portfolio/static/media/alice_location3.df3b5515ef4d421f7cbf.jpg",
+    "static/media/alice_location6.jpg": "/designers-portfolio/static/media/alice_location6.b8f46b5447b60c9b066e.jpg",
+    "static/media/royal_location3.jpg": "/designers-portfolio/static/media/royal_location3.d9b2dd3e1fd77fb63d21.jpg",
+    "static/media/alice_location1.jpg": "/designers-portfolio/static/media/alice_location1.8bef79cc55f0edb34ff6.jpg",
+    "static/media/royal_location6.jpg": "/designers-portfolio/static/media/royal_location6.1406b4262ea1bd563749.jpg",
+    "static/media/alice_location7.jpg": "/designers-portfolio/static/media/alice_location7.645c3e6165c1df44d26c.jpg",
+    "static/media/alice_location5.jpg": "/designers-portfolio/static/media/alice_location5.f6d0a880762dc737724b.jpg",
+    "static/media/royal_location2.jpg": "/designers-portfolio/static/media/royal_location2.ebd402a8e6d1f6a7c7b6.jpg",
+    "static/media/alice_location8.jpg": "/designers-portfolio/static/media/alice_location8.c85268d697b0cc2156c1.jpg",
+    "static/media/alice_location2.jpg": "/designers-portfolio/static/media/alice_location2.ae31aa0cdf829a944ba6.jpg",
+    "static/media/alice_characters.jpg": "/designers-portfolio/static/media/alice_characters.fbb89066b667f2e9ca58.jpg",
+    "static/media/slot_characters1.jpg": "/designers-portfolio/static/media/slot_characters1.b8c83f7a983669473226.jpg",
+    "static/media/char4_slots.jpg": "/designers-portfolio/static/media/char4_slots.18f116bb5022dd92b988.jpg",
+    "static/media/char1_slots.jpg": "/designers-portfolio/static/media/char1_slots.77d924e1b992c6daa966.jpg",
+    "static/media/char2_slots.jpg": "/designers-portfolio/static/media/char2_slots.a3c99bbc25c21d54ff69.jpg",
+    "static/media/char3_slots.jpg": "/designers-portfolio/static/media/char3_slots.a64f30c36f3b19837aa8.jpg",
+    "static/media/summer_characters.jpg": "/designers-portfolio/static/media/summer_characters.f5b6900c07446f0dad48.jpg",
+    "static/media/Manrope-Bold.woff": "/designers-portfolio/static/media/Manrope-Bold.0f035061db7e2a4c2c3d.woff",
+    "static/media/Manrope-SemiBold.woff": "/designers-portfolio/static/media/Manrope-SemiBold.632c80108f4d21251a3e.woff",
+    "static/media/Manrope-Medium.woff": "/designers-portfolio/static/media/Manrope-Medium.06d5d5a8a3fb137f2ca8.woff",
+    "static/media/Manrope-Bold.woff2": "/designers-portfolio/static/media/Manrope-Bold.b7344814bf982f6838e1.woff2",
+    "static/media/Manrope-SemiBold.woff2": "/designers-portfolio/static/media/Manrope-SemiBold.05b6ef303805a485b26d.woff2",
+    "static/media/Manrope-Medium.woff2": "/designers-portfolio/static/media/Manrope-Medium.c3c8fbc30da8cfe4e910.woff2",
+    "index.html": "/designers-portfolio/index.html",
+    "main.78cce981.css.map": "/designers-portfolio/static/css/main.78cce981.css.map",
+    "main.051bc79f.js.map": "/designers-portfolio/static/js/main.051bc79f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78cce981.css",
+    "static/js/main.051bc79f.js"
+  ]
+}
