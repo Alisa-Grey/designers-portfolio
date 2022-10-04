@@ -1,0 +1,70 @@
+.link-reset {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.list-reset {
+  list-style: none;
+}
+
+.btn-reset {
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.btn-reset::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-animation: ripple 1s;
+          animation: ripple 1s;
+  opacity: 0;
+}
+.btn-reset:active::after {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.section {
+  padding-top: 40px;
+}
+.section:not(:last-of-type) {
+  margin-bottom: 200px;
+}
+.section:last-of-type {
+  padding-bottom: 70px;
+}
+.section__heading {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #dedede;
+  text-transform: capitalize;
+  justify-self: center;
+  text-align: center;
+}
+.section__subheading {
+  font-size: 30px;
+  color: #dedede;
+  margin-bottom: 25px;
+}/*# sourceMappingURL=App.css.map */

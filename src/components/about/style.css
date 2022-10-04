@@ -1,0 +1,10 @@
+.about__container {
+  justify-content: center;
+  align-items: center;
+}
+.about__text {
+  width: 60%;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #dedede;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,96 @@
+.brief__text {
+  font-size: 34px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.brief-form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin: 2rem auto;
+  padding: 3rem;
+}
+.brief-form__input {
+  position: relative;
+  min-height: 40px;
+  padding: 0.25rem;
+  color: #dedede;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #dedede;
+  transition: all 0.2s ease;
+}
+.brief-form__input:focus-visible, .brief-form__input:focus {
+  outline: none;
+  border-color: #fff;
+}
+.brief-form__input:focus-visible + .brief-form__label, .brief-form__input:focus + .brief-form__label {
+  color: #fff;
+  transform: translate(0, -5rem);
+}
+.brief-form__input:not(:-moz-placeholder-shown) + .brief-form__label {
+  transform: translate(0, -5rem);
+}
+.brief-form__input:not(:-ms-input-placeholder) + .brief-form__label {
+  transform: translate(0, -5rem);
+}
+.brief-form__input:not(:placeholder-shown) + .brief-form__label {
+  transform: translate(0, -5rem);
+}
+.brief-form__textarea {
+  min-height: 20vh;
+}
+.brief-form__textarea:focus-visible + .brief-form__label, .brief-form__textarea:focus + .brief-form__label {
+  color: #fff;
+  transform: translate(0, -13.5rem);
+}
+.brief-form__textarea:not(:-moz-placeholder-shown) + .brief-form__label {
+  transform: translate(0, -13.5rem);
+}
+.brief-form__textarea:not(:-ms-input-placeholder) + .brief-form__label {
+  transform: translate(0, -13.5rem);
+}
+.brief-form__textarea:not(:placeholder-shown) + .brief-form__label {
+  transform: translate(0, -13.5rem);
+}
+.brief-form__label {
+  display: block;
+  color: #999;
+  transform: translate(0.25rem, -1.75rem);
+  transition: all 0.2s ease-out;
+}
+.brief-form .brief-form__btn {
+  position: relative;
+  align-self: flex-start;
+  padding: 10px 40px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #b4b3b3;
+}
+.brief-form .brief-form__btn:hover {
+  box-shadow: inset 0 -3.25em 0 0 #e5ff60;
+}
+@-webkit-keyframes ripple {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(10);
+  }
+}
+@keyframes ripple {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(10);
+  }
+}/*# sourceMappingURL=style.css.map */
