@@ -1,0 +1,122 @@
+@use '../../variables.sass' as v
+
+.header__container
+  align-items: center
+  width: 90%
+  margin: 0 auto
+  padding: 0 v.$gap
+
+.header__container
+  display: flex
+
+.header
+  padding: 20px 0
+  background-color: transparentize(v.$color-dark, 0.3)
+  .burger-container
+    position: relative
+    height: 30px
+    width: 35px
+    &:hover > .hamburger-lines > .line
+      background-color: transparentize(v.$color-bright, .2)
+  .toggle-menu
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 5
+    opacity: 0
+    cursor: pointer
+  .hamburger-lines
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 2
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .line
+      display: block
+      height: 4px
+      width: 100%
+      border-radius: 10px
+      background-color: #fff
+      transition: background .3s ease-in-out
+      .line1, .line2, .line3
+        transition: transform .3s ease-in-out
+    &.is-active
+      .line1
+        transform: rotate(-35deg) translate(-4px,9px)
+      .line2
+        transform: scaleY(0)
+      .line3
+        transform: rotate(35deg) translate(-8px,-14px)
+  &__logo
+    margin-right: auto
+
+  &__btn
+    background-color: transparent
+    border: none
+  &-nav
+    position: absolute
+    right: 20px
+    top: 83px
+    width: 10vw
+    padding: 20px 30px
+    background-color: transparentize(v.$color-dark, 0)
+    transform: translateX(250%)
+    transition: transform 0.3s ease-in-out
+    &.is-active
+      transform: translateX(0%)
+
+  &-nav__list
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: v.$color-light
+    font-size: 22px
+    font-weight: 700
+
+  &-nav__item:not(:last-child)
+    margin-bottom: v.$gap / 2
+
+  &-nav__link
+    position: relative
+    transition: all 0.3s ease-in-out
+
+  &-nav__link::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 100%
+    background-color: transparentize(#a3a3a3, .5)
+    filter: blur(7px)
+    z-index: -1
+    transition: width 0.3s ease-in-out
+
+.header-nav__link:focus-visible,
+.header-nav__link:focus
+  outline: none
+  text-decoration: underline overline
+  text-underline-offset: 6px
+
+.header-nav__link:hover::after
+  width: 100%
+
+.header-nav__link:active
+  color: #fff
+  text-decoration: none
+
+.header-nav__link:active::after
+  width: 0
+
+.sticky
+  position: fixed
+  top: 0
+  width: 100%
+  background-color: rgba(2, 2, 2, 0.57)
+  justify-content: flex-end

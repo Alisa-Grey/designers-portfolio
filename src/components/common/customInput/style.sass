@@ -1,0 +1,16 @@
+@use '../../../variables.sass' as v
+
+.error-text
+  height: 22px
+  color: v.$color-error
+  transform: translateY(-20px)
+  &::before
+    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAABHUlEQVQ4jaWRu04CYRCFv1mELYRQEnsSConB3YInsJHERtfEwssTGCsbE2Oj0dIYXoLCyuhTSIzRwoSeB8DGC/+xEJSVhazhlDPnNhmYETZpoVrUkHEDYLKGPbRuUxtoMcrJ5xFRGYw61nutWufu7S/XS4z3dTAiBiiTz++naqDqVknZzxegGF/Qs0y/YvfX3akNXPbjYii2dgtrt4ZRBafM2dQTFEShYduJZwEmdhWu1xMNBCZHM6lVzMN5TXHyw/klBxt7GPVEWRwhteedmIEqawXJTlOIv9sa5wqjIsAcgJvPHZtYGCMGm5M8Sk4cAYemICpLPAF+2gYDvFufJU/icpI49sZx5JThygNW/5k8ihVzy5FmMJj681T4AjEOVULIoqV+AAAAAElFTkSuQmCC")
+    position: absolute
+    bottom: 120%
+    right: 0
+    display: block
+  &:not(:empty)::before
+    opacity: 1
+  &:empty::before
+    opacity: 0

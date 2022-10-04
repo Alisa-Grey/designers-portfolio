@@ -1,0 +1,59 @@
+@use './variables.sass' as v
+
+.link-reset
+  text-decoration: none
+  color: currentColor
+
+.list-reset
+  list-style: none
+
+.btn-reset
+  background-color: transparent
+  border: 1px solid transparent
+  cursor: pointer
+  overflow: hidden
+  transition: all .3s ease-in-out
+  &::after
+    display: none
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 100px
+    height: 100px
+    margin-left: -50px
+    margin-top: -50px
+    border-radius: 50%
+    background-color: rgba(0, 0, 0, 0.2)
+    animation: ripple 1s
+    opacity: 0
+  &:active::after
+    display: block
+.container
+  display: flex
+  flex-direction: column
+  align-content: center
+  align-items: center
+  width: 90%
+  margin: 0 auto
+  padding: 0 v.$gap
+.section
+  padding-top: 40px
+  &:not(:last-of-type)
+    margin-bottom: 200px
+  &:last-of-type
+    padding-bottom: 70px
+
+  &__heading
+    margin-bottom: v.$gap / 2
+    font-weight: 700
+    font-size: 36px
+    line-height: 1.2
+    color: v.$color-light
+    text-transform: capitalize
+    justify-self: center
+    text-align: center
+  &__subheading
+    font-size: 30px
+    color: v.$color-light
+    margin-bottom: v.$gap / 2

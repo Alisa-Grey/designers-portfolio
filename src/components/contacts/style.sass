@@ -1,0 +1,22 @@
+@use '../../variables.sass' as v
+
+.contacts
+  text-align: center
+  .contacts__link
+    position: relative
+    display: inline-block
+    align-self: center
+    padding: 16px 40px 16px 70px
+    color: #000
+    background-color: v.$color-btn
+    &::before
+      content: ''
+      position: absolute
+      left: 10%
+      top: 15px
+      width: 30px
+      height: 30px
+      background-image: url("data:image/png;base64,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")
+      background-size: cover
+    &:hover
+      box-shadow: inset 20em 0 0 0 lighten(v.$color-bright, 10%)
