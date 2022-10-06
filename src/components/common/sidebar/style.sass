@@ -1,0 +1,22 @@
+@use '../../../variables.sass' as v
+
+.sidebar
+  position: fixed
+  top: 120px
+  left: 50px
+  max-width: 200px
+  .sidebar-nav
+    &__item
+      font-size: 22px
+      font-weight: 600
+      color: v.$color-light
+      border-bottom: 1px solid transparentize(v.$color-med, .5)
+      transition: background-color .3s ease-in-out
+      &:has(.sidebar-nav__link:hover)
+        background-color: transparentize(v.$color-bright, 0.8)
+      // &:not(:last-child)
+      //   margin-bottom: 10px
+    &__link
+      display: block
+      width: 100%
+      padding: 5px 0

@@ -18,6 +18,7 @@ const initialFormData: IFormData = { name: '', email: '', message: '' };
 const initialErrors: IErrors = { name: '', email: '', message: '' };
 
 const Brief: React.FC = () => {
+	const formRef = React.useRef<HTMLFormElement>(null);
 	const [formData, setFormData] = React.useState<IFormData>(initialFormData);
 	const [errors, setErrors] = React.useState<IErrors>(initialErrors);
 
@@ -25,7 +26,6 @@ const Brief: React.FC = () => {
 		const nameErr = validateField(formData.name);
 		const emailErr = validateEmail(formData.email);
 		const messageErr = validateField(formData.message);
-		console.log('first', nameErr, messageErr, emailErr);
 		if (nameErr || emailErr || messageErr) {
 			setErrors({
 				name: nameErr,
@@ -46,7 +46,21 @@ const Brief: React.FC = () => {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
 		e.preventDefault();
 		if (validateFields()) {
-			console.log('formData', formData);
+			fetch('https://formsubmit.co/ajax/corie.horatio@aladeen.org', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/json',
+				},
+				body: JSON.stringify({
+					name: formData.name,
+					email: formData.email,
+					message: formData.message,
+				}),
+			})
+				.then((response) => response.json())
+				.then((data) => alert('thank you for emailing us'))
+				.catch((error) => alert(error));
 		}
 	};
 
@@ -57,7 +71,16 @@ const Brief: React.FC = () => {
 				<p className='brief__text'>
 					Get in touch and discover how we can help you
 				</p>
-				<form className='brief-form' onSubmit={handleSubmit} noValidate>
+				<form
+					ref={formRef}
+					className='brief-form'
+					onSubmit={handleSubmit}
+					noValidate
+					action='https://formsubmit.co/el/jacici'
+					method='POST'
+					target='_blank'
+				>
+					<input type='hidden' name='_captcha' value='false'></input>
 					<CustomInput
 						type='text'
 						id='name'

@@ -37,12 +37,33 @@ const loactions = [
 	{ name: 'royal_location6.jpg', alt: 'Royal slots location - stairs' },
 	{ name: 'royal_location4.jpg', alt: 'Royal slots location - pier' },
 	{ name: 'royal_location5.jpg', alt: 'Royal slots location - swimming pool' },
-	{ name: 'slot_location5.jpg', alt: 'New slots location - grocery store' },
-	{ name: 'slot_location2.jpg', alt: 'New slots location - oriental garden' },
-	{ name: 'slot_location4.jpg', alt: 'New slots location - tiki island' },
-	{ name: 'slot_location6.jpg', alt: 'New slots location - desert at night' },
-	{ name: 'slot_location1.jpg', alt: 'New slots location - canyon' },
 	{ name: 'slot_location3.jpg', alt: 'New slots location - meadow' },
+	{ name: 'slot_location5.jpg', alt: 'New slots location - grocery store' },
+	{ name: 'slot_location7.jpg', alt: 'New slots location - fireplace' },
+	{ name: 'slot_location4.jpg', alt: 'New slots location - tiki island' },
+	{ name: 'slot_location2.jpg', alt: 'New slots location - oriental garden' },
+	{ name: 'slot_location1.jpg', alt: 'New slots location - canyon' },
+	{ name: 'slot_location6.jpg', alt: 'New slots location - desert at night' },
+	{
+		name: 'summer_locations1.jpg',
+		alt: 'Summer friends location - burger islands',
+	},
+	{
+		name: 'summer_locations3.jpg',
+		alt: 'Summer friends location - hitech islands',
+	},
+	{
+		name: 'summer_locations2.jpg',
+		alt: 'Summer friends location - coral islands',
+	},
+	{
+		name: 'summer_locations4.jpg',
+		alt: 'Summer friends location - crown islands',
+	},
+	{
+		name: 'summer_locations5.jpg',
+		alt: 'Summer friends location - castle islands',
+	},
 ];
 
 const Locations: React.FC = () => {
@@ -54,7 +75,7 @@ const Locations: React.FC = () => {
 		}
 	};
 	return (
-		<div className='category-wrap locctions'>
+		<div className='category-wrap locctions' id='locations'>
 			<h3 className='section__subheading'>Backgrounds, locations</h3>
 			<div className='img-wrap locations__img-wrap'>
 				{loactions.slice(0, limit).map((item, index) => (
@@ -62,7 +83,7 @@ const Locations: React.FC = () => {
 						key={item.name}
 						src={require(`../../assets/images/${item.name}`)}
 						alt=''
-						className={`locations__img i${index + 1}`}
+						className={`img locations__img i${index + 1}`}
 					/>
 				))}
 			</div>
@@ -72,7 +93,7 @@ const Locations: React.FC = () => {
 					onClick={handleShowMoreImages}
 					className='more-btn'
 				>
-					Load More
+					Show More
 				</button>
 			)}
 		</div>
