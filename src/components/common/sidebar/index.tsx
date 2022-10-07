@@ -7,7 +7,7 @@ const portfolioLinks = [
 	{ id: 'slots', text: 'Slots' },
 	{ id: 'ui', text: 'UX/UI' },
 	{ id: 'items', text: 'Items' },
-	{ id: 'animation', text: 'Animation' },
+	// { id: 'animation', text: 'Animation' },
 	{ id: 'motion', text: 'Motion design' },
 ];
 

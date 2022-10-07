@@ -5,7 +5,6 @@ const headerLinks = [
 	{ id: 'portfolio', text: 'Portfoio' },
 	{ id: 'brief', text: 'Brief' },
 	{ id: 'about', text: 'About' },
-	{ id: 'team', text: 'Team' },
 	{ id: 'contacts', text: 'Contacts' },
 ];
 
