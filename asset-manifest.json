@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/designers-portfolio/static/css/main.609470ec.css",
-    "main.js": "/designers-portfolio/static/js/main.529343aa.js",
+    "main.js": "/designers-portfolio/static/js/main.896ec84a.js",
     "static/media/083_1_3MainScreens.mp4": "/designers-portfolio/static/media/083_1_3MainScreens.a1c310d5438e8856f0d5.mp4",
     "static/media/slots_party.mp4": "/designers-portfolio/static/media/slots_party.6508ec908adc73283f55.mp4",
     "static/media/0081_1_RSlots_JapanScreen.mp4": "/designers-portfolio/static/media/0081_1_RSlots_JapanScreen.ac7ac89ef47c9272c6b3.mp4",
@@ -147,10 +147,10 @@
     "static/media/mob_animals_slots3.jpg": "/designers-portfolio/static/media/mob_animals_slots3.6f6563d2c30e08c2322d.jpg",
     "index.html": "/designers-portfolio/index.html",
     "main.609470ec.css.map": "/designers-portfolio/static/css/main.609470ec.css.map",
-    "main.529343aa.js.map": "/designers-portfolio/static/js/main.529343aa.js.map"
+    "main.896ec84a.js.map": "/designers-portfolio/static/js/main.896ec84a.js.map"
   },
   "entrypoints": [
     "static/css/main.609470ec.css",
-    "static/js/main.529343aa.js"
+    "static/js/main.896ec84a.js"
   ]
 }
