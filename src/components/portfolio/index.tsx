@@ -2,7 +2,7 @@ import React from 'react';
 import Animations from './animations';
 import Characters from './characters';
 import Items from './items';
-import Locations from './loactions';
+import Environment from './environment';
 import Slots from './slots';
 import UI from './ui';
 import Motion from './motion';
@@ -14,11 +14,11 @@ const Portfolio: React.FC = () => {
 			<div className='container'>
 				<h2 className='section__heading'>Portfolio</h2>
 				<Characters />
-				<Locations />
-				<Items />
-				<Animations />
-				<UI />
+				<Environment />
 				<Slots />
+				<UI />
+				<Items />
+				{/* <Animations /> */}
 				<Motion />
 			</div>
 		</section>

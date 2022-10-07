@@ -29,13 +29,7 @@ export const CustomInput: React.FC<IInputProps> = ({
 	onChange,
 }) => {
 	return (
-		<div
-			style={{
-				display: 'flex',
-				flexDirection: 'column',
-				marginBottom: '3rem',
-			}}
-		>
+		<div className='input-wrap'>
 			<input
 				type={type}
 				id={id}

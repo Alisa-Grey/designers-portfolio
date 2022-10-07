@@ -7,23 +7,38 @@ const About: React.FC = () => {
 			<div className='container about__container'>
 				<h2 className='section__heading'>About Us</h2>
 				<p className='about__text'>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi at
-					fugit omnis. Vitae eos, corrupti nemo id tenetur rem optio est non
-					architecto fugiat tempore nesciunt accusamus assumenda nostrum. Rem,
-					eligendi mollitia ab, quidem accusantium quisquam incidunt animi, odit
-					voluptatibus tempora ducimus vero nam provident perspiciatis. Delectus
-					odit, cumque placeat in, ullam ratione, facere laborum repellat eaque
-					aut corporis! Nam ex quo doloribus corporis aperiam consectetur.
-					Tempora quia non dolorum odit eligendi eos, eaque officia maiores
-					beatae incidunt totam repellendus commodi hic, nam cum nesciunt fuga
-					numquam eum quo. Dicta libero, quisquam natus inventore laboriosam hic
-					perferendis porro velit fuga et magnam omnis esse ipsum, ex
-					dignissimos adipisci eum aliquam consequuntur! Necessitatibus ullam
-					quod id cupiditate nesciunt vel molestiae! Nulla numquam iste
-					consequatur, dolorem necessitatibus quaerat eos dolorum optio error
-					laborum deserunt repellendus illo dolor eveniet tempora. Ratione
-					praesentium neque repellendus, asperiores ipsum similique magni beatae
-					necessitatibus rem perspiciatis.
+					We&nbsp;are experienced creative and art agency, acting
+					as&nbsp;a&nbsp;part of&nbsp;gamedev studio.
+				</p>
+				<p className='about__text'>
+					We&nbsp;offer high quality services in&nbsp;following areas:
+				</p>
+				<ul className='about-list'>
+					<li className='about-list__item'>
+						2d&nbsp;game art and conceptualization
+					</li>
+					<li className='about-list__item'>2d&nbsp;animations</li>
+					<li className='about-list__item'>
+						UI/UX prototyping &amp;&nbsp;design for mobile games
+					</li>
+					<li className='about-list__item'>UI&nbsp;animations</li>
+					<li className='about-list__item'>
+						Motion design and video production
+					</li>
+				</ul>
+				<p className='about__text'>
+					Our experience includes working on&nbsp;various in-house projects
+					in&nbsp;different genres like 2d&nbsp;idle RPG game, social slot
+					casino games, casual match three games and&nbsp;VR.
+				</p>
+				<p className='about__text'>
+					Ready to&nbsp;share our skills and experience to&nbsp;help you games
+					release and grow. We&nbsp;cherish creativeness, highest quality,
+					collaboration and pace which are super critical in&nbsp;modern gamedev
+					industry.
+				</p>
+				<p className='about__text'>
+					Contact&nbsp;us and let&rsquo;s build something special together!
 				</p>
 			</div>
 		</section>

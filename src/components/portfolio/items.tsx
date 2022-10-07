@@ -12,6 +12,7 @@ const items = [
 	{ name: 'items4_slots.jpg', alt: 'Items from New Slots' },
 	{ name: 'items7_slots.jpg', alt: 'Items from New Slots' },
 	{ name: 'items6_slots.jpg', alt: 'Items from New Slots' },
+	{ name: 'char2_royal.jpg', alt: 'Royal slots characters' },
 	{ name: 'items1_summer.jpg', alt: 'Items from Summer Friends' },
 	{ name: 'items2_summer.jpg', alt: 'Items from Summer Friends' },
 	{ name: 'items3_summer.jpg', alt: 'Items from Summer Friends' },

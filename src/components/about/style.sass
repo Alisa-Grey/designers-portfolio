@@ -1,11 +1,27 @@
 @use '../../variables.sass' as v
 
 .about
-  &__container
+  .about__container
     justify-content: center
-    align-items: center
+    align-items: start
+    width: 45%
+    @media screen and (max-width: 800px)
+      width: 75%
+    @media screen and (max-width: 460px)
+      width: 95%
   &__text
-    width: 60%
     font-size: 18px
     line-height: 1.5
     color: v.$color-light
+    &:not(:last-of-type)
+      margin-bottom: 15px
+  .about-list
+    margin-bottom: 15px
+    padding-left: 40px
+    line-height: 1.5
+    font-size: 18px
+    color: v.$color-light
+    &__item::marker
+      color: v.$color-bright
+    @media screen and (max-width: 460px)
+      padding-left: 15px

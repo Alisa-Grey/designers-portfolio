@@ -66,7 +66,7 @@ const loactions = [
 	},
 ];
 
-const Locations: React.FC = () => {
+const Environment: React.FC = () => {
 	const [limit, setLimit] = useState(3);
 	const max = loactions.length - 1;
 	const handleShowMoreImages = (): void => {
@@ -75,15 +75,15 @@ const Locations: React.FC = () => {
 		}
 	};
 	return (
-		<div className='category-wrap locctions' id='locations'>
-			<h3 className='section__subheading'>Backgrounds, locations</h3>
-			<div className='img-wrap locations__img-wrap'>
-				{loactions.slice(0, limit).map((item, index) => (
+		<div className='category-wrap environment' id='environment'>
+			<h3 className='section__subheading'>Environment</h3>
+			<div className='img-wrap environment__img-wrap'>
+				{loactions.slice(0, limit).map((item) => (
 					<img
 						key={item.name}
 						src={require(`../../assets/images/${item.name}`)}
 						alt=''
-						className={`img locations__img i${index + 1}`}
+						className='img environment__img'
 					/>
 				))}
 			</div>
@@ -100,4 +100,4 @@ const Locations: React.FC = () => {
 	);
 };
 
-export default Locations;
+export default Environment;

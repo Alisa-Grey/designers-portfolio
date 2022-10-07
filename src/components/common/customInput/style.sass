@@ -1,5 +1,11 @@
 @use '../../../variables.sass' as v
 
+.input-wrap
+  display: flex
+  flex-direction: column
+  margin-bottom: 3rem
+  @media screen and (max-width: 1000px)
+    margin-bottom: 1rem
 .error-text
   height: 22px
   color: v.$color-error

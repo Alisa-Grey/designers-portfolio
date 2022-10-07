@@ -5,6 +5,10 @@
   top: 120px
   left: 50px
   max-width: 200px
+  @media screen and (max-width: 1500px)
+    left: 2vw
+    &__title
+      margin-bottom: 15px
   .sidebar-nav
     &__item
       font-size: 22px
@@ -14,9 +18,15 @@
       transition: background-color .3s ease-in-out
       &:has(.sidebar-nav__link:hover)
         background-color: transparentize(v.$color-bright, 0.8)
-      // &:not(:last-child)
-      //   margin-bottom: 10px
     &__link
       display: block
       width: 100%
       padding: 5px 0
+  @media screen and (max-width: 1000px)
+    &__title
+      font-size: 22px
+    .sidebar-nav__item
+      font-size: 19px
+      border-bottom: none
+    .sidebar-nav__link
+      padding: 7px 0

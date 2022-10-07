@@ -5,6 +5,14 @@
   width: 90%
   margin: 0 auto
   padding: 0 v.$gap
+  @media screen and (max-width: 1050px)
+    padding: 0
+    .header-nav
+      width: 20vw
+  @media screen and (max-width: 500px)
+    .header-nav
+      right: 3px
+      width: 40vw
 
 .header__container
   display: flex
@@ -55,6 +63,7 @@
         transform: rotate(35deg) translate(-8px,-14px)
   &__logo
     margin-right: auto
+    width: 50px
 
   &__btn
     background-color: transparent

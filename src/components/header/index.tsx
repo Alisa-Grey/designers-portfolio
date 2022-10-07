@@ -39,7 +39,11 @@ const Header: React.FC = () => {
 	return (
 		<header className={`header ${sticky}`} ref={headerRef}>
 			<div className='header__container'>
-				<h1 className='header__logo'>Logo</h1>
+				<img
+					src={require('../../assets/images/logo.png')}
+					className='header__logo'
+					alt='Tough design logo'
+				/>
 				<div className='burger-container'>
 					<input
 						type='checkbox'

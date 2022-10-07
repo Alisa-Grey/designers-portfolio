@@ -8,10 +8,18 @@ import './App.sass';
 import Sidebar from './components/common/sidebar';
 
 const App: React.FC = () => {
+	const [matches, setMatches] = React.useState(
+		window.matchMedia('(min-width: 500px)').matches
+	);
+	React.useEffect(() => {
+		window
+			.matchMedia('(min-width: 500px)')
+			.addEventListener('change', (e) => setMatches(e.matches));
+	}, []);
 	return (
 		<div className='app'>
 			<Header />
-			<Sidebar />
+			{matches && <Sidebar />}
 			<Portfolio />
 			<Brief />
 			<About />

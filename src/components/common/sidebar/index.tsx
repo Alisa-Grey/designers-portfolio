@@ -3,18 +3,18 @@ import './style.sass';
 
 const portfolioLinks = [
 	{ id: 'characters', text: 'Characters' },
-	{ id: 'locations', text: 'Backgrounds, locations' },
+	{ id: 'environment', text: 'Environment' },
+	{ id: 'slots', text: 'Slots' },
+	{ id: 'ui', text: 'UX/UI' },
 	{ id: 'items', text: 'Items' },
 	{ id: 'animation', text: 'Animation' },
-	{ id: 'ui', text: 'UX/UI' },
-	{ id: 'slots', text: 'Slots' },
 	{ id: 'motion', text: 'Motion design' },
 ];
 
 const Sidebar: React.FC = () => {
 	return (
 		<div className='sidebar'>
-			<h2>Art categories:</h2>
+			<h2 className='sidebar__title'>Art categories:</h2>
 			<nav className='sidebar__nav sidebar-nav'>
 				<ul className='list-reset sidebar-nav__list'>
 					{portfolioLinks.map((item) => (

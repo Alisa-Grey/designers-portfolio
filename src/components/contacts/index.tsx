@@ -6,11 +6,11 @@ const Contacts: React.FC = () => {
 		<section className='section contacts' id='contacts'>
 			<h2 className='section__heading'>Contact Us</h2>
 			<a
-				href='mailto:example@email.com'
+				href='mailto:a.babaev@alicegamesfze.com'
 				className='contacts__link link-reset btn-reset'
 				data-copywrite='Email icons created by Smashicons - Flaticon'
 			>
-				example@email.com
+				a.babaev@alicegamesfze.com
 			</a>
 		</section>
 	);
