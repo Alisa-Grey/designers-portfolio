@@ -1,0 +1,37 @@
+@use '../../../variables.sass' as v
+
+.alert
+  position: absolute !important
+  top: 95px
+  left: 35vw
+  width: 30vw !important
+  margin: 0 auto
+  padding: 20px
+  border-radius: 15px
+  color: v.$color-light
+  &.success
+    background-color: v.$color-success
+  &.error
+    background-color: v.$color-error
+  &__icon
+    width: 25px
+    height: 25px
+    margin-right: 20px
+  &__btn
+    position: absolute
+    top: 5px
+    right: 10px
+    width: 25px
+    height: 25px
+  .alert__btn::before
+    content: '\00d7'
+    display: inline-block
+    position: absolute
+    top: -5px
+    right: 0
+    bottom: 0
+    left: 0
+    color: v.$color-light
+    font-size: 30px
+  @media screen and (max-width: 800px)
+    width: 70vw !important

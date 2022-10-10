@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://Alisa-Grey.github.io/designers-portfolio",
   "dependencies": {
+    "@chakra-ui/alert": "^2.0.11",
     "@types/node": "^16.11.62",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
@@ -64,8 +65,11 @@
     ]
   },
   "devDependencies": {
+    "@types/redux": "^3.6.0",
+    "@types/redux-saga": "^0.10.5",
     "@types/validator": "^13.7.7",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "redux-devtools-extension": "^2.13.9"
   }
 }
