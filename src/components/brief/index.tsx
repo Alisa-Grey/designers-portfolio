@@ -121,6 +121,7 @@ const Brief: React.FC = () => {
 						Submit
 					</button>
 				</form>
+				<div className='brief__img'></div>
 			</div>
 		</section>
 	);

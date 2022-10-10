@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.sass';
 
 const portfolioLinks = [
@@ -7,25 +7,64 @@ const portfolioLinks = [
 	{ id: 'slots', text: 'Slots' },
 	{ id: 'ui', text: 'UX/UI' },
 	{ id: 'items', text: 'Items' },
-	// { id: 'animation', text: 'Animation' },
+	{ id: 'animation', text: 'Animation' },
 	{ id: 'motion', text: 'Motion design' },
 ];
 
 const Sidebar: React.FC = () => {
+	const [isActive, setIsActive] = React.useState(false);
+	const sidebarRef = React.useRef<HTMLDivElement>(null);
+	const [matches, setMatches] = useState(
+		window.matchMedia('(max-width: 800px)').matches
+	);
+
+	React.useEffect(() => {
+		window
+			.matchMedia('(max-width: 800px)')
+			.addEventListener('change', (e) => setMatches(e.matches));
+	}, []);
+
+	const toggleSidebar = (): void => {
+		setIsActive(!isActive);
+	};
+
 	return (
 		<div className='sidebar'>
-			<h2 className='sidebar__title'>Art categories:</h2>
-			<nav className='sidebar__nav sidebar-nav'>
-				<ul className='list-reset sidebar-nav__list'>
-					{portfolioLinks.map((item) => (
-						<li className='sidebar-nav__item' key={item.id}>
-							<a href={`#${item.id}`} className='link-reset sidebar-nav__link'>
-								{item.text}
-							</a>
-						</li>
-					))}
-				</ul>
-			</nav>
+			{matches && (
+				<div
+					className='sidebar__icon'
+					onClick={toggleSidebar}
+					title='Open Categories'
+				>
+					<span className='dot'></span>
+					<span className='dot'></span>
+					<span className='dot'></span>
+				</div>
+			)}
+			<div
+				className={`sidebar__wrap ${isActive ? 'is-active' : ''}`}
+				ref={sidebarRef}
+			>
+				<h2 className='sidebar__title'>Art categories:</h2>
+				<nav className='sidebar__nav sidebar-nav'>
+					<ul className='list-reset sidebar-nav__list'>
+						{portfolioLinks.map((item) => (
+							<li
+								className='sidebar-nav__item'
+								key={item.id}
+								onClick={toggleSidebar}
+							>
+								<a
+									href={`#${item.id}`}
+									className='link-reset sidebar-nav__link'
+								>
+									{item.text}
+								</a>
+							</li>
+						))}
+					</ul>
+				</nav>
+			</div>
 		</div>
 	);
 };

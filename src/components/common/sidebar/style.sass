@@ -5,6 +5,24 @@
   top: 120px
   left: 50px
   max-width: 200px
+  z-index: 2
+  &__icon
+    display: flex
+    flex-direction: column
+    align-items: center
+    cursor: pointer
+    width: 25px
+    .dot
+      height: 10px
+      width: 10px
+      background-color: v.$color-light
+      border-radius: 50%
+      display: inline-block
+      &:not(:last-of-type)
+        margin-bottom: 5px
+      &:last-of-type
+        margin-bottom: 15px
+
   @media screen and (max-width: 1500px)
     left: 2vw
     &__title
@@ -30,3 +48,14 @@
       border-bottom: none
     .sidebar-nav__link
       padding: 7px 0
+  @media screen and (max-width: 800px)
+    .sidebar__wrap
+      opacity: 0
+      transform: translateX(-200px)
+      transition: all .2s ease-out
+      &.is-active
+        padding: 10px
+        background-color: transparentize(v.$color-dark, 0.1)
+        z-index: 2
+        transform: translateX(0px)
+        opacity: 1

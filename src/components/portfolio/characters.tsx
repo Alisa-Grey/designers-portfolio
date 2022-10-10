@@ -6,9 +6,9 @@ const characters = [
 		name: 'alice_characters.jpg',
 		alt: ' WonderMatch characters',
 	},
+	{ name: 'char15_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char_13_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char8_slots.jpg', alt: 'New slots characters' },
-	{ name: 'char4_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char4_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char7_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char2_slots.jpg', alt: 'New slots characters' },
@@ -29,9 +29,9 @@ const characters = [
 		name: 'summer_characters.jpg',
 		alt: 'Summer friends characters',
 	},
+	{ name: 'char5_slots.jpg', alt: 'New slots characters' },
+	{ name: 'char16_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char3_slots.jpg', alt: 'New slots characters' },
-	{ name: 'char5_slots.jpg', alt: 'New slots characters' },
-	{ name: 'char5_slots.jpg', alt: 'New slots characters' },
 ];
 
 const charactersMobile = [
@@ -44,9 +44,9 @@ const charactersMobile = [
 	{ name: 'mob_animals_slots1.jpg', alt: 'New slots animals' },
 	{ name: 'mob_animals_slots2.jpg', alt: 'New slots animals' },
 	{ name: 'mob_animals_slots3.jpg', alt: 'New slots animals' },
+	{ name: 'char15_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char_13_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char8_slots.jpg', alt: 'New slots characters' },
-	{ name: 'char4_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char4_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char7_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char2_slots.jpg', alt: 'New slots characters' },
@@ -59,9 +59,9 @@ const charactersMobile = [
 	{ name: 'char3_royal_slots.jpg', alt: 'Royal slots characters' },
 	{ name: 'char1_royal.jpg', alt: 'Royal slots characters' },
 	{ name: 'char4_royal_slots.jpg', alt: 'Royal slots characters' },
+	{ name: 'char5_slots.jpg', alt: 'New slots characters' },
 	{ name: 'char3_slots.jpg', alt: 'New slots characters' },
-	{ name: 'char5_slots.jpg', alt: 'New slots characters' },
-	{ name: 'char5_slots.jpg', alt: 'New slots characters' },
+	{ name: 'char16_slots.jpg', alt: 'New slots characters' },
 ];
 
 const Characters: React.FC = () => {

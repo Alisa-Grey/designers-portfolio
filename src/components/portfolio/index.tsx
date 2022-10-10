@@ -18,7 +18,7 @@ const Portfolio: React.FC = () => {
 				<Slots />
 				<UI />
 				<Items />
-				{/* <Animations /> */}
+				<Animations />
 				<Motion />
 			</div>
 		</section>

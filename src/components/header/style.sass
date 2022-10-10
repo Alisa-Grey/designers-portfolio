@@ -7,10 +7,10 @@
   padding: 0 v.$gap
   @media screen and (max-width: 1050px)
     padding: 0
-    .header-nav
+    .header-nav.is-active
       width: 20vw
   @media screen and (max-width: 500px)
-    .header-nav
+    .header-nav.is-active
       right: 3px
       width: 40vw
 
@@ -75,10 +75,10 @@
     width: 10vw
     padding: 20px 30px
     background-color: transparentize(v.$color-dark, 0)
-    transform: translateX(250%)
-    transition: transform 0.3s ease-in-out
+    transform: translateX(150%) scale(0)
+    transition: all 0.2s ease-in
     &.is-active
-      transform: translateX(0%)
+      transform: translateX(0%) scale(1)
 
   &-nav__list
     display: flex

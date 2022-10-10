@@ -1,5 +1,6 @@
 @use '../../variables.sass' as v
 .brief
+  position: relative
   &__text
     font-size: 34px
     font-weight: 600
@@ -8,6 +9,20 @@
       font-size: 30px
     @media screen and (max-width: 1000px)
       font-size: 20px
+  &__img
+    position: absolute
+    right: 15%
+    bottom: 0px
+    width: 260px
+    height: 90%
+    background-image: url('../../assets/images/panda2.png')
+    background-repeat: no-repeat
+    background-size: contain
+    @media screen and (max-width: 1500px)
+      right: 5%
+      height: 70%
+    @media screen and (max-width: 800px)
+      display: none
 .brief-form
   display: flex
   flex-direction: column
