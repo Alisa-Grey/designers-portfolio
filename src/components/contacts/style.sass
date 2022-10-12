@@ -1,6 +1,7 @@
 @use '../../variables.sass' as v
 
 .contacts
+  position: relative
   text-align: center
   .contacts__link
     position: relative
@@ -20,6 +21,16 @@
       background-size: cover
     &:hover
       box-shadow: inset 20em 0 20px 20px lighten(v.$color-bright, 10%)
+  &__img
+    position: absolute
+    top: 0
+    left: 30vw
+    width: 200px
+    height: 200px
+    // background-image: url('../../assets/images/corgi_big_1.png')
+    background-image: url('../../assets/animation/coala.webp')
+    background-repeat: no-repeat
+    background-size: contain
     @media screen and (max-width: 430px)
       padding: 16px 35px
       &::before

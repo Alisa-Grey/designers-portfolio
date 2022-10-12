@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Category from '../common/category';
 import './style.sass';
 
-const loactions = [
+export const locations = [
 	{
 		name: 'alice_location1.jpg',
 		alt: 'WonderMatch location - magic forest',
@@ -67,36 +68,14 @@ const loactions = [
 ];
 
 const Environment: React.FC = () => {
-	const [limit, setLimit] = useState(3);
-	const max = loactions.length - 1;
-	const handleShowMoreImages = (): void => {
-		if (limit <= max) {
-			setLimit(limit + limit);
-		}
-	};
 	return (
-		<div className='category-wrap environment' id='environment'>
-			<h3 className='section__subheading'>Environment</h3>
-			<div className='img-wrap environment__img-wrap'>
-				{loactions.slice(0, limit).map((item) => (
-					<img
-						key={item.name}
-						src={require(`../../assets/images/${item.name}`)}
-						alt=''
-						className='img environment__img'
-					/>
-				))}
-			</div>
-			{limit <= max && (
-				<button
-					disabled={limit >= max}
-					onClick={handleShowMoreImages}
-					className='more-btn'
-				>
-					Show More
-				</button>
-			)}
-		</div>
+		<Category
+			categoryName={'environment'}
+			data={locations}
+			itemsLimit={3}
+			hasModal={true}
+			assetsSource={'images'}
+		/>
 	);
 };
 

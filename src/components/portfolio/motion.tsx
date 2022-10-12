@@ -8,8 +8,7 @@ const vid = [
 	{ name: '0068_30sec.mp4', poster: 'noob.jpg' },
 	{ name: '080_1_Mexico_screen.mp4', poster: 'mexico.jpg' },
 	{ name: '0081_1_RSlots_JapanScreen.mp4', poster: 'japan.jpg' },
-	// check cover
-	{ name: '083_1_3MainScreens.mp4', poster: 'party.jpg' },
+	{ name: '083_1_3MainScreens.mp4', poster: 'royal.jpg' },
 	{ name: 'slots_party.mp4', poster: 'party.jpg' },
 ];
 

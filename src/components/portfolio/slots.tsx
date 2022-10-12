@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Category from '../common/category';
 import './style.sass';
 
-const slots = [
+export const slots = [
 	{ name: 'event_halloween1.jpg', alt: 'New Slots - Halloween' },
 	{ name: 'slot_classic.jpg', alt: 'New Slots - classic slot' },
 	{ name: 'slot_ninja.jpg', alt: 'New slots - ninja' },
@@ -29,36 +30,14 @@ const slots = [
 ];
 
 const Slots: React.FC = () => {
-	const [limit, setLimit] = useState(3);
-	const max = slots.length - 1;
-	const handleShowMoreImages = (): void => {
-		if (limit <= max) {
-			setLimit(limit + limit);
-		}
-	};
 	return (
-		<div className='category-wrap slots' id='slots'>
-			<h3 className='section__subheading'>Slots</h3>
-			<div className='img-wrap slots__img-wrap'>
-				{slots.slice(0, limit).map((item) => (
-					<img
-						key={item.name}
-						src={require(`../../assets/images/${item.name}`)}
-						alt=''
-						className='img slots__img'
-					/>
-				))}
-			</div>
-			{limit <= max && (
-				<button
-					disabled={limit >= max}
-					onClick={handleShowMoreImages}
-					className='more-btn'
-				>
-					Show More
-				</button>
-			)}
-		</div>
+		<Category
+			data={slots}
+			categoryName={'slots'}
+			itemsLimit={3}
+			hasModal={true}
+			assetsSource={'images'}
+		/>
 	);
 };
 

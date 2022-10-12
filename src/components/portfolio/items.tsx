@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Category from '../common/category';
 import './style.sass';
 
-const items = [
+export const items = [
 	{ name: 'items_alice.jpg', alt: 'Items from WonderMatch' },
 	{ name: 'items2_slots.jpg', alt: 'Items from New Slot' },
 	{ name: 'items1_royal.jpg', alt: 'Items from Royal slots' },
@@ -19,36 +20,14 @@ const items = [
 ];
 
 const Items: React.FC = () => {
-	const [limit, setLimit] = useState(4);
-	const max = items.length - 1;
-	const handleShowMoreImages = (): void => {
-		if (limit <= max) {
-			setLimit(limit + limit);
-		}
-	};
 	return (
-		<div className='category-wrap items' id='items'>
-			<h3 className='section__subheading'>Items</h3>
-			<div className='img-wrap items__img-wrap'>
-				{items.slice(0, limit).map((item, index) => (
-					<img
-						key={item.name}
-						src={require(`../../assets/images/${item.name}`)}
-						alt=''
-						className={`img items__img i${index + 1}`}
-					/>
-				))}
-			</div>
-			{limit <= max && (
-				<button
-					disabled={limit >= max}
-					onClick={handleShowMoreImages}
-					className='more-btn'
-				>
-					Show More
-				</button>
-			)}
-		</div>
+		<Category
+			categoryName={'items'}
+			data={items}
+			itemsLimit={4}
+			hasModal={true}
+			assetsSource={'images'}
+		/>
 	);
 };
 

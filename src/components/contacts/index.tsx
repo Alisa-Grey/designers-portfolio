@@ -12,6 +12,7 @@ const Contacts: React.FC = () => {
 			>
 				a.babaev@alicegamesfze.com
 			</a>
+			<div className='contacts__img'></div>
 		</section>
 	);
 };

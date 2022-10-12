@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Category from '../common/category';
 import './style.sass';
 
-const ui = [
+export const ui = [
 	{ name: 'ui_ns_1.jpg', alt: 'New slots UI fragment' },
 	{ name: 'ui_ns_5.jpg', alt: 'New slots UI fragment' },
 	{ name: 'ui_ns_2.jpg', alt: 'New slots UI fragment' },
@@ -19,36 +20,15 @@ const ui = [
 ];
 
 const UI: React.FC = () => {
-	const [limit, setLimit] = useState(4);
-	const max = ui.length - 1;
-	const handleShowMoreImages = (): void => {
-		if (limit <= max) {
-			setLimit(limit + 2);
-		}
-	};
 	return (
-		<div className='category-wrap ui' id='ui'>
-			<h3 className='section__subheading'>UX/UI</h3>
-			<div className='img-wrap ui__img-wrap'>
-				{ui.slice(0, limit).map((item) => (
-					<img
-						key={item.name}
-						src={require(`../../assets/images/${item.name}`)}
-						alt={item.alt}
-						className='img'
-					/>
-				))}
-			</div>
-			{limit <= max && (
-				<button
-					disabled={limit >= max}
-					onClick={handleShowMoreImages}
-					className='more-btn'
-				>
-					Show More
-				</button>
-			)}
-		</div>
+		<Category
+			categoryName={'ui'}
+			categoryHeading={'UX/UI'}
+			data={ui}
+			itemsLimit={4}
+			hasModal={true}
+			assetsSource={'images'}
+		/>
 	);
 };
 

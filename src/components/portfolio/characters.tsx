@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import Modal from '../common/modal';
 import './style.sass';
 
-const characters = [
+export const characters = [
 	{
 		name: 'alice_characters.jpg',
 		alt: ' WonderMatch characters',
@@ -65,9 +66,22 @@ const charactersMobile = [
 ];
 
 const Characters: React.FC = () => {
-	const [matches, setMatches] = useState(
-		window.matchMedia('(max-width: 800px)').matches
-	);
+	// handle modal carousel
+	const [isOpened, setIsOpened] = useState(false);
+	const [clickedImg, setClickedImg] = useState('');
+	const [currentIndex, setCurrentIndex] = useState(-1);
+
+	const handleClick = (item: { name: string }, index: number): void => {
+		setIsOpened(true);
+		setCurrentIndex(index);
+		setClickedImg(item.name);
+	};
+
+	const handleClose = (): void => {
+		setIsOpened(false);
+	};
+
+	// set limit to shown images
 	const [limit, setLimit] = useState(4);
 	const max = characters.length - 1;
 	const handleShowMoreImages = (): void => {
@@ -76,48 +90,68 @@ const Characters: React.FC = () => {
 		}
 	};
 
+	// change images list for smaller screens
+	const [matches, setMatches] = useState(
+		window.matchMedia('(max-width: 800px)').matches
+	);
 	React.useEffect(() => {
 		window
 			.matchMedia('(max-width: 800px)')
 			.addEventListener('change', (e) => setMatches(e.matches));
 	}, []);
 	return (
-		<div className='category-wrap characters' id='characters'>
-			<h3 className='section__subheading'>Characters</h3>
-			<div className='img-wrap characters__img-wrap'>
-				{!matches &&
-					characters
-						.slice(0, limit)
-						.map((item) => (
-							<img
-								key={item.name}
-								src={require(`../../assets/images/${item.name}`)}
-								alt=''
-								className='img'
-							/>
+		<>
+			<div className='category-wrap characters' id='characters'>
+				<h3 className='section__subheading'>Characters</h3>
+				<div className='img-wrap characters__img-wrap'>
+					{/* default */}
+					{!matches &&
+						characters.slice(0, limit).map((item, index) => (
+							<>
+								<img
+									key={item.name}
+									id={index.toString()}
+									src={require(`../../assets/images/${item.name}`)}
+									alt={item.alt}
+									className='img characters__img'
+									onClick={(): void => handleClick(item, index)}
+								/>
+							</>
 						))}
-				{matches &&
-					charactersMobile
-						.slice(0, limit)
-						.map((item) => (
-							<img
-								key={item.name}
-								src={require(`../../assets/images/${item.name}`)}
-								alt=''
-								className='img'
-							/>
-						))}
+					{/* smaller screens */}
+					{matches &&
+						charactersMobile
+							.slice(0, limit)
+							.map((item) => (
+								<img
+									key={item.name}
+									src={require(`../../assets/images/${item.name}`)}
+									alt=''
+									className='img characters__img'
+								/>
+							))}
+				</div>
+				{limit <= max && (
+					<button
+						disabled={limit >= max}
+						onClick={handleShowMoreImages}
+						className='more-btn'
+					>
+						Show More
+					</button>
+				)}
 			</div>
-			{limit <= max && (
-				<button
-					disabled={limit >= max}
-					onClick={handleShowMoreImages}
-					className='more-btn'
-				>
-					Show More
-				</button>
+			{isOpened && (
+				<Modal
+					currentIndex={currentIndex}
+					setCurrentIndex={setCurrentIndex}
+					clickedImg={clickedImg}
+					setClickedImg={setClickedImg}
+					data={characters}
+					onClose={handleClose}
+				/>
 			)}
-		</div>
+		</>
 	);
 };
 
