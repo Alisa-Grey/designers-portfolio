@@ -74,6 +74,7 @@ const Characters: React.FC = () => {
 			assetsSource={'images'}
 			mediaQuery={'(max-width: 800px)'}
 			dataAlternative={charactersMobile}
+			hasModal={true}
 		/>
 	);
 };

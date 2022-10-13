@@ -77,6 +77,7 @@ const Brief: React.FC = () => {
 					className='brief-form'
 					onSubmit={handleSubmit}
 					noValidate
+					// change email
 					action='https://formsubmit.co/el/jacici'
 					method='POST'
 					target='_blank'

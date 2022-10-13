@@ -66,20 +66,17 @@ const Category: React.FC<IProps> = ({
 			</h3>
 			<div className={`img-wrap ${categoryName}__img-wrap`}>
 				{!matches &&
-					data.slice(0, limit).map((item, index) => (
-						<img
-							key={item.name}
-							src={require(`../../../assets/${assetsSource}/${item.name}`)}
-							alt=''
-							className={`img ${categoryName}__img`}
-							onClick={(): void => handleClick(item, index)}
-							// onClick={
-							// 	assetsSource.includes('animation')
-							// 		? (e): void => handleAnimationClick(e, item)
-							// 		: (): void => handleClick(item, index)
-							// }
-						/>
-					))}
+					data
+						.slice(0, limit)
+						.map((item, index) => (
+							<img
+								key={item.name}
+								src={require(`../../../assets/${assetsSource}/${item.name}`)}
+								alt=''
+								className={`img ${categoryName}__img`}
+								onClick={(): void => handleClick(item, index)}
+							/>
+						))}
 				{hasModal && isOpened && (
 					<Modal
 						currentIndex={currentIndex}
