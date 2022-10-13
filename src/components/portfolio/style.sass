@@ -87,37 +87,58 @@
   width: 50vw
   grid-template-columns: repeat(3, minmax(100px, auto))
   grid-auto-flow: row
-  grid-column-gap: 15px
+  grid-column-gap: 25px
+  grid-row-gap: 15px
+  @media screen and (max-width: 1300px)
+    &
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      width: 75vw
+  @media screen and (max-width: 1000px)
+    &
+      width: 50vw
   .animation__img
     width: auto
     height: auto
+    object-fit: contain
     // fairy
     &:nth-of-type(1)
       grid-area: 1 / 1 / 1 / 2
     // fairy
     &:nth-of-type(2)
       grid-area: 1 / 2 / 1 / 3
-      height: 336px
     // fairy
     &:nth-of-type(3)
       grid-area: 2 / 1 / 2 / 2
     // fairy
     &:nth-of-type(4)
       grid-area: 2 / 2 / 2 / 3
+      padding-left: 30px
+      align-self: start
+    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4)
+      max-width: 354px
+      max-height: 358px
     // girl in white
     &:nth-of-type(5)
       grid-row: span 2
     // summer friends
     &:nth-of-type(6), &:nth-of-type(7), &:nth-of-type(8)
       height: 400px
-    &:nth-of-type(6)
-      transform: translateY(-20px)
+      align-self: center
+      justify-self: center
+    // sf dog
+    &:nth-of-type(8)
+      transform: translateY(-20px) scaleX(-1)
     // et
     &:nth-of-type(10)
       width: 520px
       transform: translate(-105px, -110px)
-    &:nth-of-type(12), &:nth-of-type(14)
-      transform: translateX(-60px)
+    &:nth-of-type(12),  &:nth-of-type(13),  &:nth-of-type(14)
+      align-self: center
+      justify-self: center
+      // transform: translateX(-15%)
     // polar bear
     &:nth-of-type(13),  &:nth-of-type(15),  &:nth-of-type(17),  &:nth-of-type(18), &:nth-of-type(19), &:nth-of-type(20)
       align-self: center
@@ -129,10 +150,14 @@
     &:nth-of-type(21)
       grid-area: 8 / 1 / 8 / 1
       width: 270px
+      justify-self: center
+      align-self: center
     // puma
     &:nth-of-type(22)
       grid-area: 9 / 1 / 9 / 1
       width: 270px
+      justify-self: center
+      align-self: center
     // bison
     &:nth-of-type(23)
       grid-row: span 2
@@ -141,9 +166,13 @@
     // bear
     &:nth-of-type(24)
       width: 270px
+      justify-self: center
+      align-self: center
     // wolf
     &:nth-of-type(25)
       width: 270px
+      justify-self: center
+      align-self: center
     // musicians
     &:nth-of-type(26), &:nth-of-type(27), &:nth-of-type(28)
       height: 300px
@@ -165,13 +194,137 @@
     // yellow
     &:nth-of-type(33)
       height: 900px
-      transform: translate(-240px, -50px)
+      transform: translate(-30%, -50px)
     // blue
     &:nth-of-type(34)
       width: 180px
       justify-self: center
       align-self: center
       transform: translateY(-50px)
+  @media screen and (max-width: 1600px)
+    .animation__img
+      width: 95%
+      &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5)
+        justify-self: center
+        align-self: center
+      &:nth-of-type(10)
+        width: 420px
+        transform: translate(-25%, -70px)
+      &:nth-of-type(15)
+        width: 280px
+        transform: translate(-20px, -30px)
+      &:nth-of-type(16)
+        width: auto
+        transform: translateX(-45%)
+      &:nth-of-type(26)
+        width: 280px
+        transform: translateX(-3vw)
+      &:nth-of-type(27)
+        transform: translateX(2vw)
+      &:nth-of-type(28)
+        width: 85%
+        transform: translateX(1vw)
+      &:nth-of-type(32)
+        transform: translate(-40%, -120px)
+      &:nth-of-type(33)
+        width: auto
+        transform: translate(-36%, -80px)
+      &:nth-of-type(34)
+        transform: translate(10px, -80px)
+  @media screen and (max-width: 1300px)
+    .animation__img
+      max-width: 48%
+      flex: 1 1 50%
+      transform: none
+      &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4)
+        width: 270px
+      &:nth-of-type(8)
+        transform: scaleX(1)
+        height: 600px
+      &:nth-of-type(9)
+        height: 400px
+      &:nth-of-type(10)
+        transform: translateY(-30px)
+      &:nth-of-type(11), &:nth-of-type(12), &:nth-of-type(13)
+        width: 250px
+        height: 250px
+      &:nth-of-type(14)
+        width: 270px
+        height: 270px
+        transform: translateY(-20px)
+      &:nth-of-type(16), &:nth-of-type(17), &:nth-of-type(18)
+        width: 230px
+        height: 230px
+        transform: translate(8%, -27px)
+      &:nth-of-type(19), &:nth-of-type(20), &:nth-of-type(21), &:nth-of-type(22)
+        width: 343px
+        height: 343px
+      &:nth-of-type(23)
+        width: 256px
+        height: 190px
+      &:nth-of-type(24)
+        width: 256px
+        height: 200px
+      &:nth-of-type(25)
+        height: 180px
+      &:nth-of-type(26)
+        width: 300px
+        height: 220px
+        transform: translateX(10px)
+      &:nth-of-type(27)
+        width: 270px
+        height: 270px
+        transform: translateX(0)
+      &:nth-of-type(29), &:nth-of-type(30)
+        width: 186px
+        height: 276px
+      &:nth-of-type(30)
+        transform: translateX(-30px)
+      &:nth-of-type(31), &:nth-of-type(32)
+        max-width: none
+        width: auto
+        height: auto
+      &:nth-of-type(31)
+        transform: translate(5%, -20px)
+      &:nth-of-type(32)
+        transform: translateX(-15%)
+      &:nth-of-type(33)
+        transform: translate(-10%, -300px)
+      &:nth-of-type(34)
+        height: 500px
+        transform: translate(-10%, -200px)
+  @media screen and (max-width: 1000px)
+    .animation__img
+      width: auto
+      height: auto
+      max-width: none
+      transform: none
+      &:nth-of-type(8)
+        transform: translateX(35px)
+      &:nth-of-type(11), &:nth-of-type(12)
+        transform: translateY(-30px)
+      &:nth-of-type(14)
+        transform: translate(-20px,-17px)
+      &:nth-of-type(15)
+        width: 340px
+        transform: translate(10px, -10px)
+      &:nth-of-type(16)
+        transform: translateY(-10px)
+      &:nth-of-type(17), &:nth-of-type(18)
+        transform: translateX(0)
+      &:nth-of-type(26)
+        transform: translate(5px, -10px)
+      &:nth-of-type(31)
+        transform: translateY(-90px)
+      &:nth-of-type(32)
+        height: 700px
+        transform: translate(-15%, -230px)
+      &:nth-of-type(33)
+        height: 700px
+        transform: translate(-10%, -330px)
+      &:nth-of-type(34)
+        transform: translate(0%, -230px)
+
 // video
 .motion__wrap
   display: flex

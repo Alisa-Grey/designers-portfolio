@@ -5,18 +5,22 @@ interface IProps {
 	categoryName: string;
 	categoryHeading?: string;
 	data: { name: string; alt: string }[];
+	dataAlternative?: { name: string; alt: string }[];
 	itemsLimit: number;
 	hasModal?: boolean;
 	assetsSource: string;
+	mediaQuery?: string;
 }
 
 const Category: React.FC<IProps> = ({
 	data,
+	dataAlternative,
 	categoryName,
 	categoryHeading,
 	itemsLimit,
 	assetsSource,
 	hasModal,
+	mediaQuery,
 }) => {
 	// handle modal carousel
 	const [isOpened, setIsOpened] = useState(false);
@@ -29,6 +33,11 @@ const Category: React.FC<IProps> = ({
 		setClickedImg(item.name);
 	};
 
+	// const handleAnimationClick = (e: any, item: any): void => {
+	// 	const name = item.name.split('.')[0] + '.png';
+	// 	e.target.src = require(`../../../assets/${assetsSource}/${name}`);
+	// };
+
 	const handleClose = (): void => {
 		setIsOpened(false);
 	};
@@ -40,21 +49,60 @@ const Category: React.FC<IProps> = ({
 			setLimit(limit + limit);
 		}
 	};
+
+	// change images list for smaller screens
+	const [matches, setMatches] = useState(
+		window.matchMedia(`${mediaQuery}`).matches
+	);
+	React.useEffect(() => {
+		window
+			.matchMedia(`${mediaQuery}`)
+			.addEventListener('change', (e) => setMatches(e.matches));
+	}, [mediaQuery]);
 	return (
 		<div className={`category-wrap ${categoryName}`} id={categoryName}>
 			<h3 className='section__subheading'>
 				{categoryHeading ? categoryHeading : categoryName}
 			</h3>
 			<div className={`img-wrap ${categoryName}__img-wrap`}>
-				{data.slice(0, limit).map((item, index) => (
-					<img
-						key={item.name}
-						src={require(`../../../assets/${assetsSource}/${item.name}`)}
-						alt=''
-						className={`img ${categoryName}__img`}
-						onClick={(): void => handleClick(item, index)}
+				{!matches &&
+					data.slice(0, limit).map((item, index) => (
+						<img
+							key={item.name}
+							src={require(`../../../assets/${assetsSource}/${item.name}`)}
+							alt=''
+							className={`img ${categoryName}__img`}
+							onClick={(): void => handleClick(item, index)}
+							// onClick={
+							// 	assetsSource.includes('animation')
+							// 		? (e): void => handleAnimationClick(e, item)
+							// 		: (): void => handleClick(item, index)
+							// }
+						/>
+					))}
+				{hasModal && isOpened && (
+					<Modal
+						currentIndex={currentIndex}
+						setCurrentIndex={setCurrentIndex}
+						clickedImg={clickedImg}
+						setClickedImg={setClickedImg}
+						data={data}
+						onClose={handleClose}
 					/>
-				))}
+				)}
+				{/* smaller screens */}
+				{mediaQuery &&
+					matches &&
+					dataAlternative
+						?.slice(0, limit)
+						.map((item) => (
+							<img
+								key={item.name}
+								src={require(`../../../assets/${assetsSource}/${item.name}`)}
+								alt={item.alt}
+								className={`img ${categoryName}__img`}
+							/>
+						))}
 			</div>
 			{limit <= max && (
 				<button
@@ -64,16 +112,6 @@ const Category: React.FC<IProps> = ({
 				>
 					Show More
 				</button>
-			)}
-			{hasModal && isOpened && (
-				<Modal
-					currentIndex={currentIndex}
-					setCurrentIndex={setCurrentIndex}
-					clickedImg={clickedImg}
-					setClickedImg={setClickedImg}
-					data={data}
-					onClose={handleClose}
-				/>
 			)}
 		</div>
 	);

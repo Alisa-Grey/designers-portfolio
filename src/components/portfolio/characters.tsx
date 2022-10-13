@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Modal from '../common/modal';
+import React from 'react';
+import Category from '../common/category';
 import './style.sass';
 
 export const characters = [
@@ -66,92 +66,15 @@ const charactersMobile = [
 ];
 
 const Characters: React.FC = () => {
-	// handle modal carousel
-	const [isOpened, setIsOpened] = useState(false);
-	const [clickedImg, setClickedImg] = useState('');
-	const [currentIndex, setCurrentIndex] = useState(-1);
-
-	const handleClick = (item: { name: string }, index: number): void => {
-		setIsOpened(true);
-		setCurrentIndex(index);
-		setClickedImg(item.name);
-	};
-
-	const handleClose = (): void => {
-		setIsOpened(false);
-	};
-
-	// set limit to shown images
-	const [limit, setLimit] = useState(4);
-	const max = characters.length - 1;
-	const handleShowMoreImages = (): void => {
-		if (limit <= max) {
-			setLimit(limit + 6);
-		}
-	};
-
-	// change images list for smaller screens
-	const [matches, setMatches] = useState(
-		window.matchMedia('(max-width: 800px)').matches
-	);
-	React.useEffect(() => {
-		window
-			.matchMedia('(max-width: 800px)')
-			.addEventListener('change', (e) => setMatches(e.matches));
-	}, []);
 	return (
-		<>
-			<div className='category-wrap characters' id='characters'>
-				<h3 className='section__subheading'>Characters</h3>
-				<div className='img-wrap characters__img-wrap'>
-					{/* default */}
-					{!matches &&
-						characters.slice(0, limit).map((item, index) => (
-							<>
-								<img
-									key={item.name}
-									id={index.toString()}
-									src={require(`../../assets/images/${item.name}`)}
-									alt={item.alt}
-									className='img characters__img'
-									onClick={(): void => handleClick(item, index)}
-								/>
-							</>
-						))}
-					{/* smaller screens */}
-					{matches &&
-						charactersMobile
-							.slice(0, limit)
-							.map((item) => (
-								<img
-									key={item.name}
-									src={require(`../../assets/images/${item.name}`)}
-									alt=''
-									className='img characters__img'
-								/>
-							))}
-				</div>
-				{limit <= max && (
-					<button
-						disabled={limit >= max}
-						onClick={handleShowMoreImages}
-						className='more-btn'
-					>
-						Show More
-					</button>
-				)}
-			</div>
-			{isOpened && (
-				<Modal
-					currentIndex={currentIndex}
-					setCurrentIndex={setCurrentIndex}
-					clickedImg={clickedImg}
-					setClickedImg={setClickedImg}
-					data={characters}
-					onClose={handleClose}
-				/>
-			)}
-		</>
+		<Category
+			categoryName={'characters'}
+			data={characters}
+			itemsLimit={4}
+			assetsSource={'images'}
+			mediaQuery={'(max-width: 800px)'}
+			dataAlternative={charactersMobile}
+		/>
 	);
 };
 

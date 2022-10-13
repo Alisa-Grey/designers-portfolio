@@ -24,13 +24,21 @@
   &__img
     position: absolute
     top: 0
-    left: 30vw
+    left: 25%
     width: 200px
     height: 200px
     // background-image: url('../../assets/images/corgi_big_1.png')
     background-image: url('../../assets/animation/coala.webp')
     background-repeat: no-repeat
     background-size: contain
+    @media screen and (max-width: 1350px)
+      &
+        left: 70%
+        transform: scaleX(-1)
+    @media screen and (max-width: 1350px)
+      &
+        display: none
+
     @media screen and (max-width: 430px)
       padding: 16px 35px
       &::before
