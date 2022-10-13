@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/designers-portfolio/static/css/main.ff0519a0.css",
-    "main.js": "/designers-portfolio/static/js/main.6fc7c87a.js",
+    "main.css": "/designers-portfolio/static/css/main.14424fce.css",
+    "main.js": "/designers-portfolio/static/js/main.7949f4c1.js",
     "static/media/083_1_3MainScreens.mp4": "/designers-portfolio/static/media/083_1_3MainScreens.a1c310d5438e8856f0d5.mp4",
     "static/media/slots_party.mp4": "/designers-portfolio/static/media/slots_party.6508ec908adc73283f55.mp4",
     "static/media/0081_1_RSlots_JapanScreen.mp4": "/designers-portfolio/static/media/0081_1_RSlots_JapanScreen.ac7ac89ef47c9272c6b3.mp4",
@@ -200,11 +200,11 @@
     "static/media/mob_summer_friend3.jpg": "/designers-portfolio/static/media/mob_summer_friend3.5410d050d289d6fc7e6d.jpg",
     "static/media/mob_animals_slots3.jpg": "/designers-portfolio/static/media/mob_animals_slots3.6f6563d2c30e08c2322d.jpg",
     "index.html": "/designers-portfolio/index.html",
-    "main.ff0519a0.css.map": "/designers-portfolio/static/css/main.ff0519a0.css.map",
-    "main.6fc7c87a.js.map": "/designers-portfolio/static/js/main.6fc7c87a.js.map"
+    "main.14424fce.css.map": "/designers-portfolio/static/css/main.14424fce.css.map",
+    "main.7949f4c1.js.map": "/designers-portfolio/static/js/main.7949f4c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff0519a0.css",
-    "static/js/main.6fc7c87a.js"
+    "static/css/main.14424fce.css",
+    "static/js/main.7949f4c1.js"
   ]
 }
