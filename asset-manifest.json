@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/designers-portfolio/static/css/main.00248d49.css",
-    "main.js": "/designers-portfolio/static/js/main.43322b86.js",
+    "main.css": "/designers-portfolio/static/css/main.ff0519a0.css",
+    "main.js": "/designers-portfolio/static/js/main.6fc7c87a.js",
     "static/media/083_1_3MainScreens.mp4": "/designers-portfolio/static/media/083_1_3MainScreens.a1c310d5438e8856f0d5.mp4",
     "static/media/slots_party.mp4": "/designers-portfolio/static/media/slots_party.6508ec908adc73283f55.mp4",
     "static/media/0081_1_RSlots_JapanScreen.mp4": "/designers-portfolio/static/media/0081_1_RSlots_JapanScreen.ac7ac89ef47c9272c6b3.mp4",
@@ -133,6 +133,7 @@
     "static/media/slot_location4.jpg": "/designers-portfolio/static/media/slot_location4.5c844caf177d648a9fb6.jpg",
     "static/media/alice_location8.jpg": "/designers-portfolio/static/media/alice_location8.ce0e1cdab55500117c29.jpg",
     "static/media/alice_location2.jpg": "/designers-portfolio/static/media/alice_location2.e6029939b508043e38c2.jpg",
+    "static/media/fairy1.png": "/designers-portfolio/static/media/fairy1.6d46e6b683a4db545e45.png",
     "static/media/team.jpg": "/designers-portfolio/static/media/team.36f4b237758512ddb5e3.jpg",
     "static/media/char4_royal_slots.jpg": "/designers-portfolio/static/media/char4_royal_slots.f7d9e5c6fd74a009d0d7.jpg",
     "static/media/slot_location1.jpg": "/designers-portfolio/static/media/slot_location1.7c46bd65cbfe9983cd42.jpg",
@@ -199,11 +200,11 @@
     "static/media/mob_summer_friend3.jpg": "/designers-portfolio/static/media/mob_summer_friend3.5410d050d289d6fc7e6d.jpg",
     "static/media/mob_animals_slots3.jpg": "/designers-portfolio/static/media/mob_animals_slots3.6f6563d2c30e08c2322d.jpg",
     "index.html": "/designers-portfolio/index.html",
-    "main.00248d49.css.map": "/designers-portfolio/static/css/main.00248d49.css.map",
-    "main.43322b86.js.map": "/designers-portfolio/static/js/main.43322b86.js.map"
+    "main.ff0519a0.css.map": "/designers-portfolio/static/css/main.ff0519a0.css.map",
+    "main.6fc7c87a.js.map": "/designers-portfolio/static/js/main.6fc7c87a.js.map"
   },
   "entrypoints": [
-    "static/css/main.00248d49.css",
-    "static/js/main.43322b86.js"
+    "static/css/main.ff0519a0.css",
+    "static/js/main.6fc7c87a.js"
   ]
 }
