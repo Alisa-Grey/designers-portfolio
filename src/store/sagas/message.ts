@@ -27,12 +27,12 @@ const sendMessage = function* ({
 			return resData;
 		});
 		yield put({
-			type: AlertActionsEnum.SHOW_ALERT,
-			payload: { text: 'Thank you for emailing us!', status: 'success' },
-		});
-		yield put({
 			type: MessageActionsEnum.SEND_MESSAGE_SUCCESS,
 			payload: resData,
+		});
+		yield put({
+			type: AlertActionsEnum.SHOW_ALERT,
+			payload: { text: 'Thank you for emailing us!', status: 'success' },
 		});
 	} catch (error: any) {
 		yield put({

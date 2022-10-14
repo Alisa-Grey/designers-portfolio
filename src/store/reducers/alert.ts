@@ -13,7 +13,6 @@ export default function alertReducer(
 ): IAlertState {
 	switch (action.type) {
 		case AlertActionsEnum.SHOW_ALERT: {
-			console.log(action, action.payload);
 			return {
 				...state,
 				isOpened: true,

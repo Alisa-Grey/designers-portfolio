@@ -5,7 +5,10 @@ import { validateEmail, validateField } from '../../utils/validation';
 import CustomAlert from '../common/alert';
 import { IMessage } from '../../store/types';
 import { useTypedSelector } from '../../hooks/hooks';
-import { MessageActionsEnum } from '../../store/actions/actions';
+import {
+	AlertActionsEnum,
+	MessageActionsEnum,
+} from '../../store/actions/actions';
 import './style.sass';
 
 interface IErrors {
@@ -23,7 +26,6 @@ const Brief: React.FC = () => {
 	const formRef = React.useRef<HTMLFormElement>(null);
 	const [formData, setFormData] = React.useState<IMessage>(initialFormData);
 	const [errors, setErrors] = React.useState<IErrors>(initialErrors);
-	const [isShown, setIsShown] = React.useState(false);
 
 	const validateFields = (): boolean => {
 		const nameErr = validateField(formData.name);
@@ -50,16 +52,15 @@ const Brief: React.FC = () => {
 		e.preventDefault();
 		if (validateFields()) {
 			dispatch({ type: MessageActionsEnum.SEND_MESSAGE, data: formData });
-			setIsShown(alert.isOpened);
 		}
 	};
 
 	const closeAlert = (): void => {
-		setIsShown(false);
+		dispatch({ type: AlertActionsEnum.HIDE_ALERT });
 	};
 	return (
 		<section className='section brief' id='brief'>
-			{isShown && (
+			{alert.isOpened && (
 				<CustomAlert
 					status={alert.status}
 					text={alert.text}
@@ -76,7 +77,7 @@ const Brief: React.FC = () => {
 					className='brief-form'
 					onSubmit={handleSubmit}
 					noValidate
-					// change email
+					// change email, dont forget to add new mail to message saga!
 					action='https://formsubmit.co/el/visecu'
 					method='POST'
 					target='_blank'
