@@ -92,12 +92,13 @@ const Category: React.FC<IProps> = ({
 					matches &&
 					dataAlternative
 						?.slice(0, limit)
-						.map((item) => (
+						.map((item, index) => (
 							<img
 								key={item.name}
 								src={require(`../../../assets/${assetsSource}/${item.name}`)}
 								alt={item.alt}
 								className={`img ${categoryName}__img`}
+								onClick={(): void => handleClick(item, index)}
 							/>
 						))}
 			</div>

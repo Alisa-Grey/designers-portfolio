@@ -5,8 +5,8 @@ import { validateEmail, validateField } from '../../utils/validation';
 import CustomAlert from '../common/alert';
 import { IMessage } from '../../store/types';
 import { useTypedSelector } from '../../hooks/hooks';
-import './style.sass';
 import { MessageActionsEnum } from '../../store/actions/actions';
+import './style.sass';
 
 interface IErrors {
 	name: string;
@@ -57,7 +57,6 @@ const Brief: React.FC = () => {
 	const closeAlert = (): void => {
 		setIsShown(false);
 	};
-
 	return (
 		<section className='section brief' id='brief'>
 			{isShown && (
@@ -78,7 +77,7 @@ const Brief: React.FC = () => {
 					onSubmit={handleSubmit}
 					noValidate
 					// change email
-					action='https://formsubmit.co/mher.champ@fallinhay.com'
+					action='https://formsubmit.co/el/visecu'
 					method='POST'
 					target='_blank'
 				>

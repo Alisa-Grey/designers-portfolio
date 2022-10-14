@@ -7,7 +7,7 @@ const sendMessage = function* ({
 }: ISendMessage): ReturnSagaType<MessageActionsEnum, IResponseGenerator> {
 	try {
 		let resData: IResponseGenerator = yield fetch(
-			'https://formsubmit.co/ajax/corie.horatio@aladeen.org',
+			'https://formsubmit.co/ajax/elishua.rakan@fallinhay.com',
 			{
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json;charset=utf-8' },
@@ -27,12 +27,12 @@ const sendMessage = function* ({
 			return resData;
 		});
 		yield put({
-			type: MessageActionsEnum.SEND_MESSAGE_SUCCESS,
-			payload: resData,
-		});
-		yield put({
 			type: AlertActionsEnum.SHOW_ALERT,
 			payload: { text: 'Thank you for emailing us!', status: 'success' },
+		});
+		yield put({
+			type: MessageActionsEnum.SEND_MESSAGE_SUCCESS,
+			payload: resData,
 		});
 	} catch (error: any) {
 		yield put({
