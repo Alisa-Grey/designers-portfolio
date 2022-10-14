@@ -4,9 +4,8 @@ import Portfolio from './components/portfolio';
 import Brief from './components/brief';
 import About from './components/about';
 import Contacts from './components/contacts';
-import './App.sass';
 import Sidebar from './components/common/sidebar';
-import CustomAlert from './components/common/alert';
+import './App.sass';
 
 const App: React.FC = () => {
 	return (

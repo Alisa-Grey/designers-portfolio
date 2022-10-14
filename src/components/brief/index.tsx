@@ -78,7 +78,7 @@ const Brief: React.FC = () => {
 					onSubmit={handleSubmit}
 					noValidate
 					// change email
-					action='https://formsubmit.co/el/jacici'
+					action='https://formsubmit.co/mher.champ@fallinhay.com'
 					method='POST'
 					target='_blank'
 				>
