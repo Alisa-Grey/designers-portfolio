@@ -20,6 +20,7 @@
 .header
   padding: 20px 0
   background-color: transparentize(v.$color-dark, 0.3)
+  z-index: 2
   .burger-container
     position: relative
     height: 30px
@@ -81,6 +82,7 @@
     transition: all 0.2s ease-in
     &.is-active
       transform: translateX(0%) scale(1)
+      z-index: 2
 
   &-nav__list
     display: flex

@@ -78,7 +78,7 @@ const Brief: React.FC = () => {
 					onSubmit={handleSubmit}
 					noValidate
 					// change email, dont forget to add new mail to message saga!
-					action='https://formsubmit.co/el/visecu'
+					action='https://formsubmit.co/el/bijewa'
 					method='POST'
 					target='_blank'
 				>

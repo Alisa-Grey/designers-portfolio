@@ -33,11 +33,6 @@ const Category: React.FC<IProps> = ({
 		setClickedImg(item.name);
 	};
 
-	// const handleAnimationClick = (e: any, item: any): void => {
-	// 	const name = item.name.split('.')[0] + '.png';
-	// 	e.target.src = require(`../../../assets/${assetsSource}/${name}`);
-	// };
-
 	const handleClose = (): void => {
 		setIsOpened(false);
 	};
