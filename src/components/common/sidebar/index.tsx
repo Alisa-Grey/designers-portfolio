@@ -2,13 +2,8 @@ import React, { useState } from 'react';
 import './style.sass';
 
 const portfolioLinks = [
-	{ id: 'characters', text: 'Characters' },
-	{ id: 'environment', text: 'Environment' },
-	{ id: 'slots', text: 'Slots' },
-	{ id: 'ui', text: 'UX/UI' },
 	{ id: 'items', text: 'Items' },
-	{ id: 'animation', text: 'Animation' },
-	{ id: 'motion', text: 'Motion design' },
+	{ id: 'ui', text: 'UX/UI' },
 ];
 
 const Sidebar: React.FC = () => {
