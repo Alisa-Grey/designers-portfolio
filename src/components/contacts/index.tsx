@@ -8,7 +8,7 @@ const Contacts: React.FC = () => {
 			<h2 className='section__heading'>Contact Us</h2>
 			<>
 				<Obfuscate
-					email='a.babaev@alicegamesfze.com'
+					email='example@mail.com'
 					headers={{
 						subject: 'Message for Tough Art',
 					}}
