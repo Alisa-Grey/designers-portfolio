@@ -7,7 +7,7 @@ const sendMessage = function* ({
 }: ISendMessage): ReturnSagaType<MessageActionsEnum, IResponseGenerator> {
 	try {
 		let resData: IResponseGenerator = yield fetch(
-			'https://formsubmit.co/ajax/a.babaev@alicegamesfze.com',
+			'https://formsubmit.co/ajax/example@mail.com',
 			{
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json;charset=utf-8' },
